@@ -33,10 +33,10 @@ export default function SkillsPage() {
     init()
   }, [router])
 
-  // ✅ Fetch skills
+  // Fetch skills
   const fetchSkills = async () => {
     try {
-      const res = await fetch('http://127.0.0.1:5000/skills')
+      const res = await fetch('https://careerlens-backend-r5hy.onrender.com/skills')
       const data = await res.json()
 
       setSkills(data.skills || [])
@@ -47,7 +47,7 @@ export default function SkillsPage() {
     }
   }
 
-  // ✅ Save skills
+  //Save skills
   const saveSkillsToBackend = async (updated: string[]) => {
     try {
       await fetch('http://127.0.0.1:5000/skills', {
