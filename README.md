@@ -88,8 +88,8 @@ CareerLens/
 ### 🔹 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/careerLens.git
-cd careerLens
+git clone https://github.com/apiyush-12/careerLens-frontend.git
+cd careerLens-frontend
 ```
 
 ---
