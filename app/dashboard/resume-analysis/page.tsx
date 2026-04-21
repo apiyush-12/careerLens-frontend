@@ -46,7 +46,7 @@ export default function ResumeAnalysisPage() {
         const parsedSkills = JSON.parse(storedSkills)
         setSkills(parsedSkills)
 
-        const res = await fetch("http://127.0.0.1:5000/skill-gap", {
+        const res = await fetch("https://careerlens-backend-r5hy.onrender.com/skill-gap", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
