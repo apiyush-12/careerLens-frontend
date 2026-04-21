@@ -84,7 +84,7 @@ if (roadmapData?.nodes) {
 
 console.log("Extracted Modules:", extracted)
 
-// ✅ Convert to proper LearningModule format
+// Convert to proper LearningModule format
 const modules: LearningModule[] = extracted.map((item, index) => ({
   id: `node-${index}`,
   title: item.title,
@@ -268,7 +268,7 @@ setLearningPath(modules)
         <div className="mt-12 p-6 border border-slate-700 rounded-xl">
           <h2 className="text-white font-bold mb-4 flex items-center gap-2">
             <CheckCircle2 className="text-green-400" />
-            Keep Going 🚀
+            Keep Going 
           </h2>
           <p className="text-slate-400">
             Track your progress and stay consistent to complete your roadmap.
