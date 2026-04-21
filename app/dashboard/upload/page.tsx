@@ -36,7 +36,7 @@ export default function ResumeUploadPage() {
     const file = e.target.files?.[0]
     if (!file) return
 
-    // ✅ Only allow PDF
+
     if (file.type !== 'application/pdf' && !file.name.endsWith('.pdf')) {
       setError('Please upload a PDF file')
       return
@@ -49,7 +49,7 @@ export default function ResumeUploadPage() {
     try {
       const supabase = createClient()
 
-      // 🔑 Get Supabase session token
+      // Get Supabase session token
       const { data: { session } } = await supabase.auth.getSession()
       const token = session?.access_token
 
@@ -57,12 +57,12 @@ export default function ResumeUploadPage() {
         throw new Error("User not authenticated")
       }
 
-      // 📦 Prepare file
+      // Prepare file
       const formData = new FormData()
       formData.append("file", file)
 
-      // 🚀 Send to Flask backend
-      const res = await fetch("http://127.0.0.1:5000/resume/upload", {
+      // Send to Flask backend
+      const res = await fetch("https://careerlens-backend-r5hy.onrender.com/resume/upload", {
         method: "POST",
         
         body: formData,
@@ -75,15 +75,15 @@ export default function ResumeUploadPage() {
       const data = await res.json()
       console.log("Backend response:", data)
 
-      // ✅ Store skills for next page
+      // Store skills for next page
       if (data.skills) {
         localStorage.setItem("skills", JSON.stringify(data.skills))
       }
 
-      // ✅ Show success UI
+      // Show success UI
       setUploadSuccess(true)
 
-      // ⏭️ Redirect after processing
+      // Redirect after processing
       setTimeout(() => {
         router.push('/dashboard/resume-analysis')
       }, 2000)
