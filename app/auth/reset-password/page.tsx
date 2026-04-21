@@ -53,7 +53,7 @@ useEffect(() => {
         console.error("Auth error:", error.message)
         return
       }
-      console.log("Session created ✅", data)
+      console.log("Session created", data)
     } catch (err) {
       console.error("Unexpected error:", err)
     }
