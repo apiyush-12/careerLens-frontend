@@ -2,8 +2,6 @@
 
 CareerLens is an AI-powered career guidance platform that analyzes user resumes, identifies skill gaps based on a target role, and generates personalized learning roadmaps to help users become job-ready.
 
----
-
 ## 📌 Features
 
 * 📄 **Resume Upload & Parsing**
@@ -38,7 +36,6 @@ CareerLens is an AI-powered career guidance platform that analyzes user resumes,
   * Login / Signup using Supabase
   * Forgot Password & Reset Password flow
 
----
 
 ## 🛠️ Tech Stack
 
@@ -65,7 +62,6 @@ CareerLens is an AI-powered career guidance platform that analyzes user resumes,
 * Vercel (Frontend)
 * Render (Backend)
 
----
 
 ## 📂 Project Structure
 
