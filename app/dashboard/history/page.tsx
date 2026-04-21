@@ -7,7 +7,7 @@ export default function ResumeHistory() {
   const [history, setHistory] = useState([])
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/resume/history")
+    fetch("https://careerlens-backend-r5hy.onrender.com/resume/history")
       .then(res => res.json())
       .then(data => setHistory(data))
   }, [])
