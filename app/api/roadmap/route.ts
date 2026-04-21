@@ -1,5 +1,5 @@
+export const dynamic = 'force-dynamic'
 import { NextRequest, NextResponse } from 'next/server'
-
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url)
@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
 
     let roadmap: any = {}
 
-    // ✅ Role-based roadmap (clean & reliable)
+    // Role-based roadmap (clean & reliable)
     if (role === 'frontend') {
       roadmap = {
         nodes: {
