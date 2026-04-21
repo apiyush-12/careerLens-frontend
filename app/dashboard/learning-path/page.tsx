@@ -58,7 +58,7 @@ if (!storedMissing) {
 
 const missingSkills = JSON.parse(storedMissing)
 
-const res = await fetch("http://127.0.0.1:5000/roadmap", {
+const res = await fetch("https://careerlens-backend-r5hy.onrender.com/roadmap", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
