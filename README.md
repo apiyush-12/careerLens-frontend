@@ -178,7 +178,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
 
 ## 📸 Screenshots
 
-*(Add your project screenshots here)*
+<img width="1920" height="911" alt="{F9330CBC-5987-4CAD-BAED-93EA18AB472A}" src="https://github.com/user-attachments/assets/6546f3b2-1f45-42ea-907c-62e6a4aa0d21" />
+
 
 ---
 
