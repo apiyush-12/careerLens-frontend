@@ -183,7 +183,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
 
 ---
 
-## 🎯 Future Improvements
+## 🎯Future Improvements
 
 * AI-based skill extraction using advanced NLP
 * Personalized recommendations using ML models
@@ -208,6 +208,7 @@ This project is licensed under the MIT License.
 ## 👨‍💻 Author
 
 **Piyush Kumar**
+**Shambhavi Akhouri**
 
 ---
 
