@@ -76,21 +76,15 @@ export default function Page() {
             {/* Hero Visual */}
             <div className="relative h-96 lg:h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl blur-3xl" />
-              <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 h-full flex items-center justify-center">
-                <div className="space-y-4 w-full">
-                  <div className="bg-slate-700/50 h-3 rounded-full w-3/4" />
-                  <div className="bg-slate-700/50 h-3 rounded-full w-full" />
-                  <div className="bg-slate-700/50 h-3 rounded-full w-5/6" />
-                  <div className="mt-8 space-y-3">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="flex items-center gap-3">
-                        <div className="w-3 h-3 rounded-full bg-blue-500" />
-                        <div className="bg-slate-700/50 h-2 rounded-full w-48" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+<div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 h-full flex items-center justify-center overflow-hidden">
+  
+  {/* Background Image */}
+  <img
+    src="/Journey-Map.png"
+    alt="Preview"
+    className="absolute inset-0 w-full h-full "
+  />
+</div>
             </div>
           </div>
         </div>
@@ -198,13 +192,23 @@ export default function Page() {
             {[
               {
                 quote: 'CareerLens helped me understand exactly what skills I needed to advance. I landed my dream role in 6 months.',
-                author: 'Sarah Chen',
-                role: 'Product Manager'
+                author: 'Shambhavi Akhouri',
+                role: 'Scrum Master'
               },
               {
                 quote: 'The personalized learning roadmap saved me so much time. Worth every penny.',
-                author: 'Marcus Johnson',
-                role: 'Software Engineer'
+                author: 'Piyush Kumar',
+                role: 'Product Manager'
+              },
+              {
+                quote: 'I stopped wasting time on random courses. The roadmap was precise, practical, and incredibly effective.',
+                author: 'Aditya Singh',
+                role: 'Developer'
+              },
+              {
+                quote: 'Mentoring on CareerLens has been incredibly rewarding. The platform makes it easy to guide learners and see real impact.',
+                author: 'Saveetha Ma’am',
+                role: 'Mentor'
               }
             ].map((testimonial, index) => (
               <div key={index} className="p-8 rounded-xl border border-slate-700 bg-slate-800/50">

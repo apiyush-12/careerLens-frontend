@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { BarChart3, FileText, Target, BookOpen, LogOut, Settings, Upload } from 'lucide-react'
 import Link from 'next/link'
+import { Wrench } from 'lucide-react'
 
 interface UserProfile {
   id: string
@@ -91,20 +92,36 @@ export default function DashboardPage() {
           </div>
 
           {/* Quick Actions */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <Link href="/dashboard/upload" asChild>
-              <button className="group p-8 rounded-xl border border-slate-700 bg-slate-800/50 hover:bg-slate-800 hover:border-blue-500/50 transition duration-300 cursor-pointer text-left">
-                <Upload className="w-12 h-12 text-blue-400 mb-4 group-hover:text-blue-300 transition" />
-                <h3 className="text-xl font-semibold text-white mb-2">Upload Resume</h3>
-                <p className="text-slate-400">Get AI-powered insights into your resume</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-7xl mx-auto">
+
+            <Link href="/dashboard/career-goal" asChild>
+              <button className="group w-full p-8 h-52 flex flex-col justify-between rounded-xl border border-slate-700 bg-slate-800/50 hover:bg-slate-800 hover:border-blue-500/50 transition duration-300 cursor-pointer text-left">
+                <Target className="w-12 h-12 text-blue-400 mb-4 group-hover:text-blue-300 transition" />
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Set Career Goals</h3>
+                  <p className="text-slate-400">Define your target roles and aspirations</p>
+                </div>
               </button>
             </Link>
 
-            <Link href="/dashboard/career-goal" asChild>
-              <button className="group p-8 rounded-xl border border-slate-700 bg-slate-800/50 hover:bg-slate-800 hover:border-blue-500/50 transition duration-300 cursor-pointer text-left">
-                <Target className="w-12 h-12 text-blue-400 mb-4 group-hover:text-blue-300 transition" />
-                <h3 className="text-xl font-semibold text-white mb-2">Set Career Goals</h3>
-                <p className="text-slate-400">Define your target roles and aspirations</p>
+
+            <Link href="/dashboard/upload" asChild>
+              <button className="group w-full p-8 h-52 flex flex-col justify-between rounded-xl border border-slate-700 bg-slate-800/50 hover:bg-slate-800 hover:border-blue-500/50 transition duration-300 cursor-pointer text-left">
+                <Upload className="w-12 h-12 text-blue-400 mb-4 group-hover:text-blue-300 transition" />
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Upload Resume</h3>
+                  <p className="text-slate-400">Get AI-powered insights into your resume</p>
+                </div>
+              </button>
+            </Link>
+
+            <Link href="/dashboard/skills" asChild>
+              <button className="group w-full p-8 h-52 flex flex-col justify-between rounded-xl border border-slate-700 bg-slate-800/50 hover:bg-slate-800 hover:border-blue-500/50 transition duration-300 cursor-pointer text-left">
+                <Wrench className="w-12 h-12 text-blue-400 mb-4 group-hover:text-blue-300 transition" />
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Manage Skills</h3>
+                  <p className="text-slate-400">Add, edit or remove your skills</p>
+                </div>
               </button>
             </Link>
           </div>

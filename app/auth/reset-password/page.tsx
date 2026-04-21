@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { createClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/button'
 import {
@@ -14,7 +14,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { useRouter } from 'next/navigation'
 import { BarChart3, Eye, EyeOff } from 'lucide-react'
-import { evaluatePassword, isPasswordAcceptable } from '@/lib/passwordStrength'
+import { evaluatePassword, isPasswordAcceptable } from '@/lib/passwordstrength'
 
 const STRENGTH_CONFIG = {
   empty:          { segments: 0, color: '',               text: '',            textColor: '' },
@@ -43,10 +43,27 @@ export default function ResetPasswordPage() {
   const [done, setDone]                   = useState(false)
   const router = useRouter()
 
+useEffect(() => {
+  const supabase = createClient()
+
+  const handleAuth = async () => {
+    try {
+      const { data, error } = await supabase.auth.exchangeCodeForSession(window.location.href)
+      if (error) {
+        console.error("Auth error:", error.message)
+        return
+      }
+      console.log("Session created ✅", data)
+    } catch (err) {
+      console.error("Unexpected error:", err)
+    }
+  }
+  handleAuth()
+}, [])
+
   const strength = evaluatePassword(password)
   const config   = STRENGTH_CONFIG[strength.level]
   const showStrength = pwTouched && password.length > 0
-
   const handleReset = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
